@@ -1,0 +1,32 @@
+{
+  "name": "md-contents",
+  "version": "0.0.1",
+  "description": "Generates the table of contents for markdown documents.",
+  "main": "src/index.ts",
+  "browser": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdshelf/md-contents.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Henry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdshelf/md-contents/issues"
+  },
+  "homepage": "https://github.com/mdshelf/md-contents#readme",
+  "devDependencies": {
+    "rollup": "^2.67.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  }
+}
