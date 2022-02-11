@@ -1,4 +1,7 @@
 
+import fs from 'fs'
+import archiver from 'archiver'
+
 interface MetadataObject {
   title: string
 }
@@ -24,6 +27,25 @@ export class Packdocument {
   constructor(data: Metadata) {
     this.metadata = new Metadata(data)
     this.version = "3.0"
+  }
+
+  saveAsEpub() {
+    let archive = archiver("zip", { zlib: { level: 9 } })
+    let output = fs.createWriteStream('/mnt/d/Henry/md-contents/oo.zip');
+    archive.pipe(output)
+    //  if (self.options.verbose) {
+    //    console.log("Zipping temp dir to", self.options.output);
+    //  }
+
+    // mimetype
+    archive.append("application/epub+zip", {
+      store: true,
+      name: "mimetype"
+    })
+
+    archive.directory('/mnt/d/Henry/md-contents/src', 'pdir')
+
+    archive.finalize()
   }
 
   test() {
