@@ -17,7 +17,7 @@ export class Metadata {
 /**
  * Equals the package element in Epub 3.2.
  */
-export class Epub {
+export class Packdocument {
   metadata: Metadata;
   version: string;
 
@@ -30,4 +30,3 @@ export class Epub {
     console.log('test title:. ', this.metadata.title)
   }
 }
-

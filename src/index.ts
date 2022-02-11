@@ -1,9 +1,9 @@
-import { Epub } from './epub/epub'
+import { Packdocument } from './packdocument/packdocument'
 
 const metadata = {
-  title: "custome title"
+  title: "custome title OKOK2w"
 }
 console.log('Hello')
 
-const ep = new Epub(metadata)
+const ep = new Packdocument(metadata)
 ep.test()
